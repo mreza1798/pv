@@ -30,7 +30,7 @@ end
 end
 if msg.chat.type == 'private' and chat_info == 'true' then
 if blocks[1] == 'end' or blocks[1] == 'chat' then return nil end
-api.forwardMessage('-139110802', msg.chat.id, msg_id) 
+api.forwardMessage('-157731324', msg.chat.id, msg_id) 
 api.sendKeyboard(msg.chat.id, '`- پیام شما ارسال شد !`\n_بزودی پاسخگو هستیم_'  ,do_keyboard_endchat(), true)
 end
 if blocks[1] == 'block' then
@@ -41,7 +41,7 @@ local user_id = msg.forward_from.id
 api.sendMessage(msg.chat.id, '_کاربر '..user_id..' بلاک شد_', true) 
 api.sendMessage(user_id, '`- متاسفیم`\n_شما بلاک شدید_\n\n*چت پایان یافت.*', true) 
 else
- if msg.chat.type == 'group' and msg.chat.id == -139110802 then
+ if msg.chat.type == 'group' and msg.chat.id == -157731324 then
  if msg.reply then return nil end
 local user_id = blocks[2]
  db:hset(hash, user_id, 'block')
